@@ -1,3 +1,6 @@
+import string
+
+
 def intersection(array1, array2):
     result = []
     temp = {}
@@ -21,4 +24,17 @@ def find_duplicate(chars):
         else:
             known_chars[char] = True
 
+    return None
+
+
+def find_missing_letter(sentence):
+    used_chars = {}
+    for letter in sentence:
+        unique_char = letter.lower()
+        used_chars[unique_char] = True
+
+    alphabet = string.ascii_lowercase
+    for letter in alphabet:
+        if letter not in used_chars:
+            return letter
     return None

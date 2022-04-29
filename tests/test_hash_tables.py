@@ -1,4 +1,8 @@
-from datastructures_algorithms.hash_tables import find_duplicate, intersection
+from datastructures_algorithms.hash_tables import (
+    find_duplicate,
+    find_missing_letter,
+    intersection,
+)
 
 
 class TestHashTables:
@@ -13,3 +17,8 @@ class TestHashTables:
         chars = ["a", "b", "c", "d", "c", "e", "f"]
 
         assert find_duplicate(chars) == "c"
+
+    def test_find_missing_letter(self):
+        sentence = "The quick brown box jumps over the lazy dog"
+
+        assert find_missing_letter(sentence) == "f"
