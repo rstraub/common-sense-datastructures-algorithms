@@ -1,4 +1,4 @@
-from datastructures_algorithms.hash_tables import intersection
+from datastructures_algorithms.hash_tables import find_duplicate, intersection
 
 
 class TestHashTables:
@@ -8,3 +8,8 @@ class TestHashTables:
         expected = [2, 4]
 
         assert intersection(array1, array2) == expected
+
+    def test_find_duplicate(self):
+        chars = ["a", "b", "c", "d", "c", "e", "f"]
+
+        assert find_duplicate(chars) == "c"
