@@ -1,6 +1,7 @@
 from datastructures_algorithms.hash_tables import (
     find_duplicate,
     find_missing_letter,
+    find_non_duplicate_letter,
     intersection,
 )
 
@@ -22,3 +23,8 @@ class TestHashTables:
         sentence = "The quick brown box jumps over the lazy dog"
 
         assert find_missing_letter(sentence) == "f"
+
+    def test_find_non_duplicate_letter(self):
+        word = "minimum"
+
+        assert find_non_duplicate_letter(word) == "n"

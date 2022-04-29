@@ -38,3 +38,21 @@ def find_missing_letter(sentence):
         if letter not in used_chars:
             return letter
     return None
+
+
+def find_non_duplicate_letter(word):
+    known_letters = {}
+
+    # Tally the letters in the word: { 'a': 2, 'b': 3, ... }
+    for letter in word:
+        if letter in known_letters:
+            known_letters[letter] = known_letters[letter] + 1
+        else:
+            known_letters[letter] = 1
+
+    # Return first word with 1 occurrence
+    for letter in word:
+        if known_letters[letter] == 1:
+            return letter
+
+    return None
