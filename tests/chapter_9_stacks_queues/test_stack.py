@@ -1,4 +1,4 @@
-from datastructures_algorithms.chapter_9_stacks_queues.stacks_queues import Stack
+from datastructures_algorithms.chapter_9_stacks_queues.stack import Stack
 
 
 class TestStack:
