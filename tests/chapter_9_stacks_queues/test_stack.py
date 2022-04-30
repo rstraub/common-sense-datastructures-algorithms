@@ -1,10 +1,7 @@
-from datastructures_algorithms.chapter_9_stacks_queues.stacks_queues import (
-    Stack,
-    reverse,
-)
+from datastructures_algorithms.chapter_9_stacks_queues.stacks_queues import Stack
 
 
-class TestStacksAndQueues:
+class TestStack:
     def test_push_should_add_element_to_top(self):
         stack = Stack()
 
@@ -31,6 +28,3 @@ class TestStacksAndQueues:
         stack = Stack()
 
         assert stack.read() is None
-
-    def test_reverse_string(self):
-        assert reverse("hello") == "olleh"
