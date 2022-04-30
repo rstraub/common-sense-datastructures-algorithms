@@ -28,3 +28,16 @@ class TestQueue:
         queue = Queue()
 
         assert queue.dequeue() is None
+
+    def test_exercise_3(self):
+        queue = Queue()
+
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.enqueue(4)
+        queue.enqueue(5)
+        queue.enqueue(6)
+
+        assert queue.dequeue() == 1
+        assert queue.dequeue() == 2

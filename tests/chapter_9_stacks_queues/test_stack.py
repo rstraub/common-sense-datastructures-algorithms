@@ -28,3 +28,16 @@ class TestStack:
         stack = Stack()
 
         assert stack.read() is None
+
+    def test_exercise_2(self):
+        stack = Stack()
+
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        stack.push(4)
+        stack.push(5)
+        stack.push(6)
+
+        assert stack.pop() == 6
+        assert stack.pop() == 5
