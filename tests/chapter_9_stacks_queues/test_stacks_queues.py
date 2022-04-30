@@ -1,4 +1,7 @@
-from datastructures_algorithms.stacks_queues import Stack, reverse
+from datastructures_algorithms.chapter_9_stacks_queues.stacks_queues import (
+    Stack,
+    reverse,
+)
 
 
 class TestStacksAndQueues:
