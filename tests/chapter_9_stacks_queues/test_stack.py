@@ -41,3 +41,4 @@ class TestStack:
 
         assert stack.pop() == 6
         assert stack.pop() == 5
+        assert stack.read() == 4

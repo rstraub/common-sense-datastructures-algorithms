@@ -41,3 +41,4 @@ class TestQueue:
 
         assert queue.dequeue() == 1
         assert queue.dequeue() == 2
+        assert queue.read() == 3
