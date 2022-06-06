@@ -2,6 +2,7 @@ import pytest
 
 from datastructures_algorithms.chapter_11_writing_recursive.writing_recursive import (
     count_chars,
+    find_x,
     select_even,
     triangle,
 )
@@ -27,3 +28,6 @@ class TestWritingRecursion:
     )
     def test_triangle(self, n, expected):
         assert triangle(n) == expected
+
+    def test_find_x(self):
+        assert find_x("abcdefghijklmnopqrstuvwxyz") == 23

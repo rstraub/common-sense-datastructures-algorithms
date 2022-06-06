@@ -24,3 +24,10 @@ def triangle(n):
         return 1
 
     return n + triangle(n - 1)
+
+
+def find_x(text):
+    if text[0] == "x":
+        return 0
+    else:
+        return find_x(text[1 : len(text)]) + 1
