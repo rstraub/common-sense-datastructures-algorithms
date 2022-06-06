@@ -5,6 +5,7 @@ from datastructures_algorithms.chapter_11_writing_recursive.writing_recursive im
     find_x,
     select_even,
     triangle,
+    unique_paths,
 )
 
 
@@ -31,3 +32,12 @@ class TestWritingRecursion:
 
     def test_find_x(self):
         assert find_x("abcdefghijklmnopqrstuvwxyz") == 23
+
+    @pytest.mark.parametrize(
+        "rows,columns,expected",
+        [(1, 1, 0), (1, 2, 1), (2, 1, 1), (2, 2, 2), (3, 2, 3), (3, 7, 28)],
+    )
+    def test_unique_paths(self, rows, columns, expected):
+        result = unique_paths(rows, columns)
+
+        assert result == expected
