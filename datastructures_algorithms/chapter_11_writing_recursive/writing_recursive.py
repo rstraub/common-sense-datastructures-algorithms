@@ -4,3 +4,16 @@ def count_chars(texts):
 
     # Number of chars in current string
     return len(texts[0]) + count_chars(texts[1 : len(texts)])
+
+
+def select_even(numbers):
+    if not numbers:
+        return []
+
+    remainder = select_even(numbers[1 : len(numbers)])
+    if numbers[0] % 2 == 0:
+        result = [numbers[0]]
+        result.extend(remainder)
+        return result
+    else:
+        return remainder
